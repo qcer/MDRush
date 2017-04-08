@@ -1,0 +1,35 @@
+// -index.jade
+extends ../layout.jade
+block head
+	// -head.jade
+	title Qcer
+	|   
+	meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+	|   
+	link(href="/components/bootstrap/css/bootstrap.min.css", rel="stylesheet") 
+	link(href="/components/font-awesome-4.7.0/css/font-awesome.css", rel="stylesheet")
+	|   
+	link(href="/css/style.css", rel="stylesheet")
+block body
+		#wrapper
+			include ../header.jade
+			a(href="https://github.com/qcer", target="_blank")
+				img#fork-img(src="./img/forkme_right_red.png", alt="Fork me on GitHub", data-bd-imgshare-binded="1")
+			#page-wrapper
+					#page.row
+						#content
+							#left-area
+								textarea#edit_area(v-model="edit_content")
+								span {{parseMd}}
+							#right-area(v-html="show_content")
+									div {{parseMd}}
+
+
+			include ../footer.jade
+			script(src="/js/jquery-3.1.1.min.js")
+			script(src="/js/vue.min.js")
+
+			script(src="/js/marked.js")
+			script(src="/js/admin.js")
+
+
