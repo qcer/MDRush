@@ -2,7 +2,7 @@
 extends ../layout.jade
 block head
 	// -head.jade
-	title Qcer
+	title MDRush
 	|   
 	meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
 	|   
@@ -10,12 +10,18 @@ block head
 	link(href="/components/font-awesome-4.7.0/css/font-awesome.css", rel="stylesheet")
 	|   
 	link(href="/css/style.css", rel="stylesheet")
+	link(href="/css/component.css", rel="stylesheet")
+
 block body
 		#wrapper
 			include ../header.jade
-			a(href="https://github.com/qcer", target="_blank")
+			a(href="https://github.com/qcer/MDRush", target="_blank")
 				img#fork-img(src="./img/forkme_right_red.png", alt="Fork me on GitHub", data-bd-imgshare-binded="1")
 			#page-wrapper
+
+					div#cbp-spmenu-s2.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right
+						!{tutorial}
+
 					#page.row
 						#content
 							#left-area
@@ -29,7 +35,11 @@ block body
 			script(src="/js/jquery-3.1.1.min.js")
 			script(src="/js/vue.min.js")
 
+			script(src="/js/classie.js")
+			script(src="/js/modernizr.custom.js")
+			script(src="/js/custom.js")
+
 			script(src="/js/marked.js")
-			script(src="/js/admin.js")
+
 
 
