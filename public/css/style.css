@@ -59,6 +59,14 @@ a {
 	margin-bottom: 0px;
 }
 
+
+#showRightPush {
+	margin-left: 50px;
+	height: 100%;
+	font-size: 18px;
+	/*font-weight: normal;*/
+}
+
 #top-left {
 	font-weight: 600;
 	display:inline-block;
@@ -67,15 +75,6 @@ a {
 #top-left a {
 	color: #FFFFFF;
 }
-
-
-#showRightPush {
-	padding-left: 50px;
-	height: 100%;
-	font-size: 18px;
-	/*font-weight: normal;*/
-}
-
 
 #top-left li a:hover{
 	color:#B5B5B5;

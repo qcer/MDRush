@@ -16,21 +16,17 @@ $(function () {
 
 	var showRightPush = document.getElementById( 'showRightPush' ),
 		menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-		body = document.body;
+		flag_class = "cbp-spmenu-open";
 
 
 	showRightPush.onclick = function() {
-		classie.toggle( this, 'active' );
-		classie.toggle( body, 'cbp-spmenu-push-toleft' );
-		classie.toggle( menuRight, 'cbp-spmenu-open' );
-		disableOther( 'showRightPush' );
-	};
-
-	function disableOther( button ) {
-		if( button !== 'showRightPush' ) {
-			classie.toggle( showRightPush, 'disabled' );
+		// classie.toggle( menuRight, 'cbp-spmenu-open' );
+		var flag = menuRight.classList.contains(flag_class);
+		if (flag) {
+			menuRight.classList.remove(flag_class);
+		} else {
+			menuRight.classList.add(flag_class);
 		}
-	}
-
+	};
 
 })
