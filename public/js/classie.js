@@ -26,8 +26,6 @@ var hasClass, addClass, removeClass;
 
 if ( 'classList' in document.documentElement ) {
   hasClass = function( elem, c ) {
-      console.log(elem.classList);
-
     return elem.classList.contains( c );
   };
   addClass = function( elem, c ) {
